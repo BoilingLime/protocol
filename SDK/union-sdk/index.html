@@ -784,8 +784,8 @@
 <p>Rarible Protocol Software Development Kit enables applications to interact with Rarible protocol easily: query, issue, trade NFTs on any blockchain supported.</p>
 <p>Currently, these blockchains are supported:</p>
 <ul>
-<li>Ethereum</li>
-<li>Flow (on devnet)</li>
+<li>Ethereum (rinkeby, mainnet)</li>
+<li>Flow (currently on devnet only)</li>
 <li>Tezos (on granada testnet)</li>
 </ul>
 <p>Protocol SDK is available on GitHub: <a href="https://github.com/rarible/sdk">https://github.com/rarible/sdk</a></p>
@@ -799,7 +799,7 @@
 <p>SDK is written in typescript. You can use typings to explore SDK possibilities.</p>
 <p>To use SDK, first you have to create a Wallet - abstraction to communicate with real blockchain wallets:</p>
 <div class="highlight"><pre><span></span><code><span class="c1">// Initialize ethereum wallet</span>
-<span class="k">import</span> <span class="p">{</span> <span class="nx">EthereumWallet</span> <span class="p">}</span> <span class="kr">from</span> <span class="s2">&quot;@rarible/sdk-wallet/src&quot;</span>
+<span class="k">import</span> <span class="p">{</span> <span class="nx">EthereumWallet</span> <span class="p">}</span> <span class="kr">from</span> <span class="s2">&quot;@rarible/sdk-wallet&quot;</span>
 
 <span class="kd">const</span> <span class="nx">ethereum</span> <span class="o">=</span> <span class="ow">new</span> <span class="nx">Web3Ethereum</span><span class="p">({</span> <span class="nx">web3</span><span class="p">,</span> <span class="kr">from</span> <span class="p">})</span>
 <span class="kd">const</span> <span class="nx">ethereumWallet</span> <span class="o">=</span> <span class="ow">new</span> <span class="nx">EthereumWallet</span><span class="p">(</span><span class="nx">ethereum</span><span class="p">,</span> <span class="kr">from</span><span class="p">)</span> 
@@ -840,6 +840,8 @@
 
 <span class="c1">// Fetch activity (events) by the Item</span>
 <span class="nx">sdk</span><span class="p">.</span><span class="nx">apis</span><span class="p">.</span><span class="nx">activity</span><span class="p">.</span><span class="nx">getActivitiesByItem</span><span class="p">({</span> <span class="kr">type</span><span class="o">:</span> <span class="p">[</span><span class="s2">&quot;TRANSFER&quot;</span><span class="p">],</span> <span class="nx">contract</span><span class="p">,</span> <span class="nx">tokenId</span> <span class="p">})</span>
+
+<span class="c1">//etc... pls explore SDK apis and openapi docs</span>
 </code></pre></div>
                 
               
