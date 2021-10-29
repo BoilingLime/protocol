@@ -6,10 +6,12 @@
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width,initial-scale=1">
       
+        <meta name="description" content="Rarible Protocol documentation">
       
       
       
-      <link rel="icon" href="../../../assets/images/favicon.png">
+      
+      <link rel="icon" href="../../../assets/favicon.png">
       <meta name="generator" content="mkdocs-1.2.3, mkdocs-material-7.3.4">
     
     
@@ -22,10 +24,6 @@
       
         
         <link rel="stylesheet" href="../../../assets/stylesheets/palette.3f5d1f46.min.css">
-        
-          
-          
-          <meta name="theme-color" content="#000000">
         
       
     
@@ -51,13 +49,17 @@
   
     
     
+      
     
     
     
-    <body dir="ltr" data-md-color-scheme="" data-md-color-primary="black" data-md-color-accent="">
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="black" data-md-color-accent="">
   
     
     <script>function __prefix(e){return new URL("../../..",location).pathname+"."+e}function __get(e,t=localStorage){return JSON.parse(t.getItem(__prefix(e)))}</script>
+    
+      <script>var palette=__get("__palette");if(null!==palette&&"object"==typeof palette.color)for(var key in palette.color)document.body.setAttribute("data-md-color-"+key,palette.color[key])</script>
     
     <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
     <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
@@ -102,6 +104,28 @@
         </div>
       </div>
     </div>
+    
+      <form class="md-header__option" data-md-component="palette">
+        
+          
+          
+          <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="black" data-md-color-accent=""  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_1">
+          
+            <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_2" hidden>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 6H7c-3.31 0-6 2.69-6 6s2.69 6 6 6h10c3.31 0 6-2.69 6-6s-2.69-6-6-6zm0 10H7c-2.21 0-4-1.79-4-4s1.79-4 4-4h10c2.21 0 4 1.79 4 4s-1.79 4-4 4zM7 9c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3z"/></svg>
+            </label>
+          
+        
+          
+          
+          <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="blue" data-md-color-accent=""  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_2">
+          
+            <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_1" hidden>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 7H7a5 5 0 0 0-5 5 5 5 0 0 0 5 5h10a5 5 0 0 0 5-5 5 5 0 0 0-5-5m0 8a3 3 0 0 1-3-3 3 3 0 0 1 3-3 3 3 0 0 1 3 3 3 3 0 0 1-3 3z"/></svg>
+            </label>
+          
+        
+      </form>
     
     
     
@@ -901,11 +925,10 @@
                   </a>
                 
                 
-                <h1 id="accepting-a-buy-order">Accepting a Buy Order</h1>
+                <h1 id="accepting-a-buy-order">Accepting a Buy Order<a class="headerlink" href="#accepting-a-buy-order" title="Permanent link">&para;</a></h1>
 <p>To buy an item or accept a bid user should send transaction to <a href="https://rinkeby.etherscan.io/address/0x43162023c187662684abaf0b211dccb96fa4ed8a">Exchange</a> contract's matchOrders function.</p>
-<p>{% hint style="info" %}
-Example for sending matchOrders is here: <a href="https://github.com/evgenynacu/sign-typed-data/blob/ropsten/src/order/script.ts#L82">https://github.com/evgenynacu/sign-typed-data/blob/ropsten/src/order/script.ts#L82</a>
-{% endhint %}</p>
+<p _="%" endhint="endhint">{% hint style="info" %}
+Example for sending matchOrders is here: <a href="https://github.com/evgenynacu/sign-typed-data/blob/ropsten/src/order/script.ts#L82">https://github.com/evgenynacu/sign-typed-data/blob/ropsten/src/order/script.ts#L82</a></p>
 <p>matchOrders function defined in <a href="https://github.com/rariblecom/protocol-contracts/blob/master/exchange-v2/contracts/exchange/v2/ExchangeV2Core.sol">ExchangeV2Core</a> has 4 parameters:</p>
 <ol>
 <li>left order.</li>
@@ -913,10 +936,9 @@ Example for sending matchOrders is here: <a href="https://github.com/evgenynacu/
 <li>right order</li>
 <li>right order signature </li>
 </ol>
-<p>{% hint style="info" %}
-more about order structure can be found <a href="https://docs.rarible.com/exchange/exchangev2#order-structure">here</a>
-{% endhint %}</p>
-<h3 id="pay-eth-for-erc721">Pay ETH for ERC721</h3>
+<p _="%" endhint="endhint">{% hint style="info" %}
+more about order structure can be found <a href="https://docs.rarible.com/exchange/exchangev2#order-structure">here</a></p>
+<h3 id="pay-eth-for-erc721">Pay ETH for ERC721<a class="headerlink" href="#pay-eth-for-erc721" title="Permanent link">&para;</a></h3>
 <p><strong>You can only fill an ETH order if your side of the order is providing the ETH</strong>. Otherwise you would have to use WETH which has the transferFrom capability.</p>
 <p>Encoded order</p>
 <div class="highlight"><pre><span></span><code>{
@@ -938,7 +960,7 @@ more about order structure can be found <a href="https://docs.rarible.com/exchan
 }
 </code></pre></div>
 <p>Example transaction that has both a signed sell order and an unsigned buy order, submitted by the buyer. <a href="https://rinkeby.etherscan.io/tx/0x2d01b1869b556629acf7304b53d2f77fd927a2c3c9daea02aa093ba8ba41b4c6">https://rinkeby.etherscan.io/tx/0x2d01b1869b556629acf7304b53d2f77fd927a2c3c9daea02aa093ba8ba41b4c6</a></p>
-<h2 id="bid-orders">Bid Orders</h2>
+<h2 id="bid-orders">Bid Orders<a class="headerlink" href="#bid-orders" title="Permanent link">&para;</a></h2>
 <p>A bid is just an unmatched buy order. The bidder submits the order to the indexer, like shown in <strong>Creating a sell order</strong>. The seller accepts it by creating a matched order.</p>
                 
               
@@ -999,6 +1021,19 @@ more about order structure can be found <a href="https://docs.rarible.com/exchan
         
       </div>
       
+  <div class="md-footer-social">
+    
+      
+      
+        
+        
+      
+      <a href="https://discord.gg/3ByePUMAvB" target="_blank" rel="noopener" title="discord.gg" class="md-footer-social__link">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512"><path d="M524.531 69.836a1.5 1.5 0 0 0-.764-.7A485.065 485.065 0 0 0 404.081 32.03a1.816 1.816 0 0 0-1.923.91 337.461 337.461 0 0 0-14.9 30.6 447.848 447.848 0 0 0-134.426 0 309.541 309.541 0 0 0-15.135-30.6 1.89 1.89 0 0 0-1.924-.91 483.689 483.689 0 0 0-119.688 37.107 1.712 1.712 0 0 0-.788.676C39.068 183.651 18.186 294.69 28.43 404.354a2.016 2.016 0 0 0 .765 1.375 487.666 487.666 0 0 0 146.825 74.189 1.9 1.9 0 0 0 2.063-.676A348.2 348.2 0 0 0 208.12 430.4a1.86 1.86 0 0 0-1.019-2.588 321.173 321.173 0 0 1-45.868-21.853 1.885 1.885 0 0 1-.185-3.126 251.047 251.047 0 0 0 9.109-7.137 1.819 1.819 0 0 1 1.9-.256c96.229 43.917 200.41 43.917 295.5 0a1.812 1.812 0 0 1 1.924.233 234.533 234.533 0 0 0 9.132 7.16 1.884 1.884 0 0 1-.162 3.126 301.407 301.407 0 0 1-45.89 21.83 1.875 1.875 0 0 0-1 2.611 391.055 391.055 0 0 0 30.014 48.815 1.864 1.864 0 0 0 2.063.7A486.048 486.048 0 0 0 610.7 405.729a1.882 1.882 0 0 0 .765-1.352c12.264-126.783-20.532-236.912-86.934-334.541zM222.491 337.58c-28.972 0-52.844-26.587-52.844-59.239s23.409-59.241 52.844-59.241c29.665 0 53.306 26.82 52.843 59.239 0 32.654-23.41 59.241-52.843 59.241zm195.38 0c-28.971 0-52.843-26.587-52.843-59.239s23.409-59.241 52.843-59.241c29.667 0 53.307 26.82 52.844 59.239 0 32.654-23.177 59.241-52.844 59.241z"/></svg>
+      </a>
+    
+  </div>
+
     </div>
   </div>
 </footer>
@@ -1007,7 +1042,7 @@ more about order structure can be found <a href="https://docs.rarible.com/exchan
     <div class="md-dialog" data-md-component="dialog">
       <div class="md-dialog__inner md-typeset"></div>
     </div>
-    <script id="__config" type="application/json">{"base": "../../..", "features": ["navigation.sections"], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "search": "../../../assets/javascripts/workers/search.8397ff9e.min.js", "version": null}</script>
+    <script id="__config" type="application/json">{"base": "../../..", "features": ["navigation.sections", "search.highlight", "navigation.instant"], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "search": "../../../assets/javascripts/workers/search.8397ff9e.min.js", "version": null}</script>
     
     
       <script src="../../../assets/javascripts/bundle.1e84347e.min.js"></script>
