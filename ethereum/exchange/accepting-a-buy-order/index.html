@@ -467,6 +467,20 @@
 
             
           
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../use-cases/bubblesdk/" class="md-nav__link">
+        EZCode SDK plugin
+      </a>
+    </li>
+  
+
+            
+          
         </ul>
       </nav>
     </li>
@@ -945,17 +959,15 @@
                 
                 <h1 id="accepting-a-buy-order">Accepting a Buy Order<a class="headerlink" href="#accepting-a-buy-order" title="Permanent link">&para;</a></h1>
 <p>To buy an item or accept a bid user should send transaction to <a href="https://rinkeby.etherscan.io/address/0x43162023c187662684abaf0b211dccb96fa4ed8a">Exchange</a> contract's matchOrders function.</p>
-<p _="%" endhint="endhint">{% hint style="info" %}
-Example for sending matchOrders is here: <a href="https://github.com/evgenynacu/sign-typed-data/blob/ropsten/src/order/script.ts#L82">https://github.com/evgenynacu/sign-typed-data/blob/ropsten/src/order/script.ts#L82</a></p>
-<p>matchOrders function defined in <a href="https://github.com/rariblecom/protocol-contracts/blob/master/exchange-v2/contracts/exchange/v2/ExchangeV2Core.sol">ExchangeV2Core</a> has 4 parameters:</p>
+<p>Example for sending matchOrders is <a href="https://github.com/evgenynacu/sign-typed-data/blob/ropsten/src/order/script.ts#L82">here</a>.</p>
+<p>matchOrders function defined in <a href="https://github.com/rarible/protocol-contracts/blob/master/exchange-v2/contracts/ExchangeV2Core.sol">ExchangeV2Core</a> has 4 parameters:</p>
 <ol>
 <li>left order.</li>
 <li>left order signature</li>
 <li>right order</li>
 <li>right order signature </li>
 </ol>
-<p _="%" endhint="endhint">{% hint style="info" %}
-more about order structure can be found <a href="https://docs.rarible.com/exchange/exchangev2#order-structure">here</a></p>
+<p>More about order structure can be found <a href="https://docs.rarible.org/ethereum/exchange/exchange-overview/#order-structure">here - Order Structure</a></p>
 <h3 id="pay-eth-for-erc721">Pay ETH for ERC721<a class="headerlink" href="#pay-eth-for-erc721" title="Permanent link">&para;</a></h3>
 <p><strong>You can only fill an ETH order if your side of the order is providing the ETH</strong>. Otherwise you would have to use WETH which has the transferFrom capability.</p>
 <p>Encoded order</p>
@@ -977,9 +989,10 @@ more about order structure can be found <a href="https://docs.rarible.com/exchan
   &quot;data&quot;: &quot;0x0000000000000000000000000000000000000000000000000000000000000040000000000000000000000000000000000000000000000000000000000000006000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000&quot;
 }
 </code></pre></div>
-<p>Example transaction that has both a signed sell order and an unsigned buy order, submitted by the buyer. <a href="https://rinkeby.etherscan.io/tx/0x2d01b1869b556629acf7304b53d2f77fd927a2c3c9daea02aa093ba8ba41b4c6">https://rinkeby.etherscan.io/tx/0x2d01b1869b556629acf7304b53d2f77fd927a2c3c9daea02aa093ba8ba41b4c6</a></p>
+<p><a href="https://rinkeby.etherscan.io/tx/0x2d01b1869b556629acf7304b53d2f77fd927a2c3c9daea02aa093ba8ba41b4c6">Example transaction</a> that has both a signed sell order and an unsigned buy order, submitted by the buyer.</p>
 <h2 id="bid-orders">Bid Orders<a class="headerlink" href="#bid-orders" title="Permanent link">&para;</a></h2>
-<p>A bid is just an unmatched buy order. The bidder submits the order to the indexer, like shown in <strong>Creating a sell order</strong>. The seller accepts it by creating a matched order.</p>
+<p>A bid is just an unmatched buy order. The bidder submits the order to the indexer, like shown in </p>
+<p><strong>Creating a sell order</strong>. The seller accepts it by creating a matched order.</p>
                 
               
               
