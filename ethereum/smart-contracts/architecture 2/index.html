@@ -16,7 +16,7 @@
     
     
       
-        <title>Accepting a Buy Order - Rarible Protocol</title>
+        <title>Smart Contract Architecture - Rarible Protocol</title>
       
     
     
@@ -67,7 +67,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#accepting-a-buy-order" class="md-skip">
+        <a href="#smart-contract-architecture" class="md-skip">
           Skip to content
         </a>
       
@@ -98,7 +98,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Accepting a Buy Order
+              Smart Contract Architecture
             
           </span>
         </div>
@@ -479,16 +479,14 @@
 
   
   
-    
-  
   
     
       
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5" type="checkbox" id="__nav_5" checked>
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5" type="checkbox" id="__nav_5" >
       
       
       
@@ -654,14 +652,12 @@
               
   
   
-    
-  
   
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5_5" type="checkbox" id="__nav_5_5" checked>
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5_5" type="checkbox" id="__nav_5_5" >
       
       
       
@@ -684,7 +680,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../exchange-overview/" class="md-nav__link">
+      <a href="../../exchange/exchange-overview/" class="md-nav__link">
         Exchange Overview
       </a>
     </li>
@@ -698,7 +694,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../creating-a-sell-order/" class="md-nav__link">
+      <a href="../../exchange/creating-a-sell-order/" class="md-nav__link">
         Creating A Sell Order
       </a>
     </li>
@@ -712,7 +708,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../order-discovery/" class="md-nav__link">
+      <a href="../../exchange/order-discovery/" class="md-nav__link">
         Order Discovery
       </a>
     </li>
@@ -724,60 +720,11 @@
               
   
   
-    
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          Accepting a Buy Order
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../../exchange/accepting-a-buy-order/" class="md-nav__link">
         Accepting a Buy Order
       </a>
-      
-        
-
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#pay-eth-for-erc721" class="md-nav__link">
-    Pay ETH for ERC721
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#bid-orders" class="md-nav__link">
-    Bid Orders
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -789,7 +736,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../updating-cancelling-an-order/" class="md-nav__link">
+      <a href="../../exchange/updating-cancelling-an-order/" class="md-nav__link">
         Updating/Canceling an Order
       </a>
     </li>
@@ -803,7 +750,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../contract-wallets/" class="md-nav__link">
+      <a href="../../exchange/contract-wallets/" class="md-nav__link">
         Contract Wallets
       </a>
     </li>
@@ -850,7 +797,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../smart-contracts/architecture/" class="md-nav__link">
+      <a href="../architecture/" class="md-nav__link">
         Architecture
       </a>
     </li>
@@ -864,7 +811,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../smart-contracts/matching-orders/" class="md-nav__link">
+      <a href="../matching-orders/" class="md-nav__link">
         Matching Orders
       </a>
     </li>
@@ -906,28 +853,6 @@
     
   
   
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#pay-eth-for-erc721" class="md-nav__link">
-    Pay ETH for ERC721
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#bid-orders" class="md-nav__link">
-    Bid Orders
-  </a>
-  
-</li>
-      
-    </ul>
-  
 </nav>
                   </div>
                 </div>
@@ -938,48 +863,16 @@
             <article class="md-content__inner md-typeset">
               
                 
-                  <a href="https://github.com/rarible/protocol/edit/master/docs/ethereum/exchange/accepting-a-buy-order.md" title="Edit this page" class="md-content__button md-icon">
+                  <a href="https://github.com/rarible/protocol/edit/master/docs/ethereum/smart-contracts/architecture 2.md" title="Edit this page" class="md-content__button md-icon">
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25z"/></svg>
                   </a>
                 
                 
-                <h1 id="accepting-a-buy-order">Accepting a Buy Order<a class="headerlink" href="#accepting-a-buy-order" title="Permanent link">&para;</a></h1>
-<p>To buy an item or accept a bid user should send transaction to <a href="https://rinkeby.etherscan.io/address/0x43162023c187662684abaf0b211dccb96fa4ed8a">Exchange</a> contract's matchOrders function.</p>
-<p _="%" endhint="endhint">{% hint style="info" %}
-Example for sending matchOrders is here: <a href="https://github.com/evgenynacu/sign-typed-data/blob/ropsten/src/order/script.ts#L82">https://github.com/evgenynacu/sign-typed-data/blob/ropsten/src/order/script.ts#L82</a></p>
-<p>matchOrders function defined in <a href="https://github.com/rariblecom/protocol-contracts/blob/master/exchange-v2/contracts/exchange/v2/ExchangeV2Core.sol">ExchangeV2Core</a> has 4 parameters:</p>
-<ol>
-<li>left order.</li>
-<li>left order signature</li>
-<li>right order</li>
-<li>right order signature </li>
-</ol>
-<p _="%" endhint="endhint">{% hint style="info" %}
-more about order structure can be found <a href="https://docs.rarible.com/exchange/exchangev2#order-structure">here</a></p>
-<h3 id="pay-eth-for-erc721">Pay ETH for ERC721<a class="headerlink" href="#pay-eth-for-erc721" title="Permanent link">&para;</a></h3>
-<p><strong>You can only fill an ETH order if your side of the order is providing the ETH</strong>. Otherwise you would have to use WETH which has the transferFrom capability.</p>
-<p>Encoded order</p>
-<div class="highlight"><pre><span></span><code>{
-  &quot;maker&quot;: &quot;0x744222844bfecc77156297a6427b5876a6769e19&quot;,
-  &quot;makeAsset&quot;: { &quot;assetType&quot;: { &quot;assetClass&quot;: &quot;0xaaaebeba&quot;, &quot;data&quot;: &quot;0x&quot; }, &quot;value&quot;: &quot;100000000000000000&quot; },
-  &quot;taker&quot;: &quot;0x0000000000000000000000000000000000000000&quot;,
-  &quot;takeAsset&quot;: {
-    &quot;assetType&quot;: {
-      &quot;assetClass&quot;: &quot;0x73ad2146&quot;,
-      &quot;data&quot;: &quot;0x000000000000000000000000cfa14f6dc737b8f9e0fc39f05bf3d903ac5d45750000000000000000000000000000000000000000000000000000000000000005&quot;
-    },
-    &quot;value&quot;: &quot;1&quot;
-  },
-  &quot;salt&quot;: &quot;0&quot;,
-  &quot;start&quot;: &quot;0&quot;,
-  &quot;end&quot;: &quot;0&quot;,
-  &quot;dataType&quot;: &quot;0x4c234266&quot;,
-  &quot;data&quot;: &quot;0x0000000000000000000000000000000000000000000000000000000000000040000000000000000000000000000000000000000000000000000000000000006000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000&quot;
-}
-</code></pre></div>
-<p>Example transaction that has both a signed sell order and an unsigned buy order, submitted by the buyer. <a href="https://rinkeby.etherscan.io/tx/0x2d01b1869b556629acf7304b53d2f77fd927a2c3c9daea02aa093ba8ba41b4c6">https://rinkeby.etherscan.io/tx/0x2d01b1869b556629acf7304b53d2f77fd927a2c3c9daea02aa093ba8ba41b4c6</a></p>
-<h2 id="bid-orders">Bid Orders<a class="headerlink" href="#bid-orders" title="Permanent link">&para;</a></h2>
-<p>A bid is just an unmatched buy order. The bidder submits the order to the indexer, like shown in <strong>Creating a sell order</strong>. The seller accepts it by creating a matched order.</p>
+                <h1 id="smart-contract-architecture">Smart Contract Architecture<a class="headerlink" href="#smart-contract-architecture" title="Permanent link">&para;</a></h1>
+<p>Rarible exchange smart contracts are built using OpenZeppelin's upgradeable smart contracts library. So the smart contract code can be updated to support new features, fix bugs, etc.</p>
+<p>Smart contracts are heavily tested, tests are provided in the test folder.</p>
+<p>Functionality is divided into parts (each responsible for the part of the algorithm).</p>
+<p>Essentially, ExchangeV2 is a smart contract for the decentralized exchange of any assets presented on Ethereum (or EVM compatible) blockchain.</p>
                 
               
               
@@ -995,41 +888,6 @@ more about order structure can be found <a href="https://docs.rarible.com/exchan
       
         
 <footer class="md-footer">
-  
-    <nav class="md-footer__inner md-grid" aria-label="Footer">
-      
-        
-        <a href="../order-discovery/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Order Discovery" rel="prev">
-          <div class="md-footer__button md-icon">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
-          </div>
-          <div class="md-footer__title">
-            <div class="md-ellipsis">
-              <span class="md-footer__direction">
-                Previous
-              </span>
-              Order Discovery
-            </div>
-          </div>
-        </a>
-      
-      
-        
-        <a href="../updating-cancelling-an-order/" class="md-footer__link md-footer__link--next" aria-label="Next: Updating/Canceling an Order" rel="next">
-          <div class="md-footer__title">
-            <div class="md-ellipsis">
-              <span class="md-footer__direction">
-                Next
-              </span>
-              Updating/Canceling an Order
-            </div>
-          </div>
-          <div class="md-footer__button md-icon">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"/></svg>
-          </div>
-        </a>
-      
-    </nav>
   
   <div class="md-footer-meta md-typeset">
     <div class="md-footer-meta__inner md-grid">
