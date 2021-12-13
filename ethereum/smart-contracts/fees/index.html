@@ -12,7 +12,7 @@
       
       
       <link rel="icon" href="../../../assets/favicon.png">
-      <meta name="generator" content="mkdocs-1.2.3, mkdocs-material-7.3.4">
+      <meta name="generator" content="mkdocs-1.2.3, mkdocs-material-7.3.6">
     
     
       
@@ -20,7 +20,7 @@
       
     
     
-      <link rel="stylesheet" href="../../../assets/stylesheets/main.db9e7362.min.css">
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.a57b2b03.min.css">
       
         
         <link rel="stylesheet" href="../../../assets/stylesheets/palette.3f5d1f46.min.css">
@@ -731,6 +731,8 @@
       </a>
       
         
+
+
 <nav class="md-nav md-nav--secondary" aria-label="Table of contents">
   
   
@@ -753,8 +755,8 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#calculation-the-commission-side-of-the-transaction" class="md-nav__link">
-    Calculation the commission side of the transaction
+  <a href="#how-do-we-calculate-the-commission-side-of-the-transaction" class="md-nav__link">
+    How do we calculate the commission side of the transaction?
   </a>
   
 </li>
@@ -997,6 +999,8 @@
                 <div class="md-sidebar__scrollwrap">
                   <div class="md-sidebar__inner">
                     
+
+
 <nav class="md-nav md-nav--secondary" aria-label="Table of contents">
   
   
@@ -1019,8 +1023,8 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#calculation-the-commission-side-of-the-transaction" class="md-nav__link">
-    Calculation the commission side of the transaction
+  <a href="#how-do-we-calculate-the-commission-side-of-the-transaction" class="md-nav__link">
+    How do we calculate the commission side of the transaction?
   </a>
   
 </li>
@@ -1071,44 +1075,43 @@
 <li><code>LibOrder.Order</code> <code>rightOrder</code> — right order data</li>
 </ul>
 <p>In this method, the following actions are performed.</p>
-<h3 id="calculation-the-commission-side-of-the-transaction">Calculation the commission side of the transaction<a class="headerlink" href="#calculation-the-commission-side-of-the-transaction" title="Permanent link">&para;</a></h3>
-<p>Asset, which can be interpreted as money. All Fees and Royalties will be credited to this Asset.</p>
+<h3 id="how-do-we-calculate-the-commission-side-of-the-transaction">How do we calculate the commission side of the transaction?<a class="headerlink" href="#how-do-we-calculate-the-commission-side-of-the-transaction" title="Permanent link">&para;</a></h3>
 <ol>
 <li>Use <code>LibFeeSide.getFeeSide</code>. It takes as arguments <code>assetClasses</code> of both sides (for example, <code>ETH</code> and <code>ERC20</code>).</li>
-<li><code>LibFeeSide.getFeeSide</code> tries to determine side to pay Fees:</li>
+<li><code>LibFeeSide.getFeeSide</code> tries to determine side to pay fees:</li>
 </ol>
 <p><img alt="" src="../../img/eth_5.png" /></p>
 <ul>
 <li>If there is ETH on any side of the transaction, it is used.</li>
 <li>If there is no ETH, we check if there is an ERC-20 and use it.</li>
 <li>If there is no ERC-20, check if there is an ERC-1155 and use it.</li>
-<li>Otherwise, no fee will be charged. For example, if two ERC-721 are involved in the transaction.</li>
+<li>Otherwise, no fee will be charged. (e.g. if two ERC-721 are involved in the transaction)</li>
 </ul>
 <h3 id="transfer">Transfer<a class="headerlink" href="#transfer" title="Permanent link">&para;</a></h3>
 <ol>
-<li>If the make-side pays Fees:<ul>
+<li>If the make-side pays fees:<ul>
 <li>calling <code>doTransfersWithFees</code> for the make-side</li>
 <li>calling <code>transferPayouts</code> for the take-side</li>
 </ul>
 </li>
-<li>If the take-side pays Fees:<ul>
+<li>If the take-side pays fees:<ul>
 <li>calling <code>doTransfersWithFees</code> for the take-side</li>
 <li>calling <code>transferPayouts</code> for the make-side</li>
 </ul>
 </li>
-<li>If the side for the payment of Fees are not defined:<ul>
+<li>If the side for the payment of fees are not defined:<ul>
 <li>call <code>transferPayouts</code> for both sides</li>
 </ul>
 </li>
 </ol>
-<p>When calculating the total amount of the asset:</p>
+<p>When computing the total amount of the asset:</p>
 <ul>
-<li>The protocol Fee is added on top of the filled amount.</li>
-<li>The Fee for sending the buyer's order is also added on top.</li>
+<li>The protocol fee is added on top of the filled amount.</li>
+<li>The fee for sending the buyer's order is also added on top.</li>
 </ul>
 <p>If the buyer uses the ERC-20 token for payment, he must approve the calculated number of tokens.</p>
-<p>If the buyer uses ETH, he must send the calculated amount to ETH along with the transaction.</p>
-<p>For more information about Fees, see the page <a href="https://github.com/rarible/protocol-contracts/blob/master/exchange-v2/contracts/RaribleTransferManager.md">RaribleTransferManager</a> on GitHub.</p>
+<p>If the buyer uses ETH, they must send the calculated amount to ETH along with the transaction.</p>
+<p>For more information about fees, see the page <a href="https://github.com/rarible/protocol-contracts/blob/master/exchange-v2/contracts/RaribleTransferManager.md">RaribleTransferManager</a> on GitHub.</p>
                 
               
               
@@ -1189,10 +1192,10 @@
     <div class="md-dialog" data-md-component="dialog">
       <div class="md-dialog__inner md-typeset"></div>
     </div>
-    <script id="__config" type="application/json">{"base": "../../..", "features": ["navigation.sections", "search.highlight", "navigation.instant"], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "search": "../../../assets/javascripts/workers/search.8397ff9e.min.js", "version": null}</script>
+    <script id="__config" type="application/json">{"base": "../../..", "features": ["navigation.sections", "search.highlight", "navigation.instant"], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "search": "../../../assets/javascripts/workers/search.fcfe8b6d.min.js", "version": null}</script>
     
     
-      <script src="../../../assets/javascripts/bundle.1e84347e.min.js"></script>
+      <script src="../../../assets/javascripts/bundle.b1047164.min.js"></script>
       
     
   </body>

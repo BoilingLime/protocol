@@ -12,7 +12,7 @@
       
       
       <link rel="icon" href="../../../assets/favicon.png">
-      <meta name="generator" content="mkdocs-1.2.3, mkdocs-material-7.3.4">
+      <meta name="generator" content="mkdocs-1.2.3, mkdocs-material-7.3.6">
     
     
       
@@ -20,7 +20,7 @@
       
     
     
-      <link rel="stylesheet" href="../../../assets/stylesheets/main.db9e7362.min.css">
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.a57b2b03.min.css">
       
         
         <link rel="stylesheet" href="../../../assets/stylesheets/palette.3f5d1f46.min.css">
@@ -848,6 +848,8 @@
       </a>
       
         
+
+
 <nav class="md-nav md-nav--secondary" aria-label="Table of contents">
   
   
@@ -977,6 +979,8 @@
                 <div class="md-sidebar__scrollwrap">
                   <div class="md-sidebar__inner">
                     
+
+
 <nav class="md-nav md-nav--secondary" aria-label="Table of contents">
   
   
@@ -1015,9 +1019,9 @@
                 
                 
                 <h1 id="create-orders">Create Orders<a class="headerlink" href="#create-orders" title="Permanent link">&para;</a></h1>
-<p>To create the Order, use the upsertOrder method in <a href="https://ethereum-api.rarible.org/v0.1/doc#tag/order-controller">order-controller</a>.</p>
+<p>To create an order, use the upsertOrder method in <a href="https://ethereum-api.rarible.org/v0.1/doc#tag/order-controller">order-controller</a>.</p>
 <h2 id="upsertorder"><a href="https://ethereum-api.rarible.org/v0.1/doc#operation/upsertOrder">upsertOrder</a><a class="headerlink" href="#upsertorder" title="Permanent link">&para;</a></h2>
-<p>Creates or updates the Order.</p>
+<p>Creates or updates an Order.</p>
 <p><code>https://ethereum-api.rarible.org/v0.1/order/orders</code></p>
 <p>Example request (staging):</p>
 <div class="highlight"><pre><span></span><code>curl --request POST <span class="s1">&#39;https://ethereum-api-staging.rarible.org/v0.1/order/orders&#39;</span> <span class="se">\</span>
@@ -1033,8 +1037,8 @@
 <li><strong>make</strong> — make the side of the order. What the creator has</li>
 <li><strong>take</strong> — take the side of the order. What the creator wants to get in exchange for the make side</li>
 <li><strong>salt</strong> — the string of data that is passed to the hash function along with the input array of data to calculate the hash</li>
-<li><strong>start</strong> — the start date of the order placement, from which the buyer can make a Bid (optional)</li>
-<li><strong>end</strong> — the end date of the order placement, before which the buyer can make a Bid (optional)</li>
+<li><strong>start</strong> — the start date of the order placement, from which the buyer can make a Bid (optional) p.s. unix time is used </li>
+<li><strong>end</strong> — the end date of the order placement, before which the buyer can make a Bid (optional) p.s. unix time is used </li>
 <li><strong>signature</strong> — the digital signature of the order creator</li>
 </ul>
 <p>Response example (status 200):</p>
@@ -1216,10 +1220,10 @@
     <div class="md-dialog" data-md-component="dialog">
       <div class="md-dialog__inner md-typeset"></div>
     </div>
-    <script id="__config" type="application/json">{"base": "../../..", "features": ["navigation.sections", "search.highlight", "navigation.instant"], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "search": "../../../assets/javascripts/workers/search.8397ff9e.min.js", "version": null}</script>
+    <script id="__config" type="application/json">{"base": "../../..", "features": ["navigation.sections", "search.highlight", "navigation.instant"], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "search": "../../../assets/javascripts/workers/search.fcfe8b6d.min.js", "version": null}</script>
     
     
-      <script src="../../../assets/javascripts/bundle.1e84347e.min.js"></script>
+      <script src="../../../assets/javascripts/bundle.b1047164.min.js"></script>
       
     
   </body>

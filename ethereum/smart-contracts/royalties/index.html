@@ -12,7 +12,7 @@
       
       
       <link rel="icon" href="../../../assets/favicon.png">
-      <meta name="generator" content="mkdocs-1.2.3, mkdocs-material-7.3.4">
+      <meta name="generator" content="mkdocs-1.2.3, mkdocs-material-7.3.6">
     
     
       
@@ -20,7 +20,7 @@
       
     
     
-      <link rel="stylesheet" href="../../../assets/stylesheets/main.db9e7362.min.css">
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.a57b2b03.min.css">
       
         
         <link rel="stylesheet" href="../../../assets/stylesheets/palette.3f5d1f46.min.css">
@@ -745,6 +745,8 @@
       </a>
       
         
+
+
 <nav class="md-nav md-nav--secondary" aria-label="Table of contents">
   
   
@@ -991,6 +993,8 @@
                 <div class="md-sidebar__scrollwrap">
                   <div class="md-sidebar__inner">
                     
+
+
 <nav class="md-nav md-nav--secondary" aria-label="Table of contents">
   
   
@@ -1053,13 +1057,13 @@
 <h2 id="royalties-v1">Royalties V1<a class="headerlink" href="#royalties-v1" title="Permanent link">&para;</a></h2>
 <p>The exchange contract interacts with the Rarible royalties implementation indirectly through a <a href="https://github.com/rarible/protocol-contracts/blob/master/royalties-registry/contracts/RoyaltiesRegistry.sol#L63">Royalty Registry</a>. The registry checks if the NFT contract supports the expected interface, and if so, queries for the Rarible royalties array.</p>
 <p>This allows for Rarible to support different royalty standards for different collections.</p>
-<p>Rarible Protocol Supports on-chain Royalties. These are handled in the ExchangeV1 contract by the royalties array, which is needed to execute the mint function.</p>
+<p>Rarible Protocol Supports on-chain royalties. These are handled in the ExchangeV1 contract by the royalties array, which is needed to execute the mint function.</p>
 <p>This tuple is made up of two variables, <strong>fees.recipient</strong> and <strong>fees.value</strong>.</p>
 <ul>
-<li><strong>fees.recipient</strong> — refers to either the item owner (by default) or an address where the Royalties will be received.</li>
+<li><strong>fees.recipient</strong> — refers to either the item owner (by default) or an address where the royalties will be received.</li>
 <li><strong>fees.value</strong> — the royalties percentage. By default, this value is 1000 on Rarible, which is a 10% royalties fee. This is done using basis points. More information regarding basis point can be found <a href="https://corporatefinanceinstitute.com/resources/knowledge/finance/basis-point-beep/">here</a>.</li>
 </ul>
-<p>Below you can find the code block from ExchangeV1, which handles the on-chain Royalties.</p>
+<p>Below you can find the code block from ExchangeV1, which handles the on-chain royalties.</p>
 <div class="highlight"><pre><span></span><code><span class="nx">contract</span> <span class="nx">HasSecondarySaleFees</span> <span class="nx">is</span> <span class="nx">ERC165</span> <span class="p">{</span>
     <span class="nx">event</span> <span class="nx">SecondarySaleFees</span><span class="p">(</span><span class="nx">uint256</span> <span class="nx">tokenId</span><span class="p">,</span> <span class="nx">address</span><span class="p">[]</span> <span class="nx">recipients</span><span class="p">,</span> <span class="nx">uint</span><span class="p">[]</span> <span class="nx">bps</span><span class="p">);</span>
     <span class="cm">/*</span>
@@ -1160,10 +1164,10 @@
     <div class="md-dialog" data-md-component="dialog">
       <div class="md-dialog__inner md-typeset"></div>
     </div>
-    <script id="__config" type="application/json">{"base": "../../..", "features": ["navigation.sections", "search.highlight", "navigation.instant"], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "search": "../../../assets/javascripts/workers/search.8397ff9e.min.js", "version": null}</script>
+    <script id="__config" type="application/json">{"base": "../../..", "features": ["navigation.sections", "search.highlight", "navigation.instant"], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "search": "../../../assets/javascripts/workers/search.fcfe8b6d.min.js", "version": null}</script>
     
     
-      <script src="../../../assets/javascripts/bundle.1e84347e.min.js"></script>
+      <script src="../../../assets/javascripts/bundle.b1047164.min.js"></script>
       
     
   </body>

@@ -12,7 +12,7 @@
       
       
       <link rel="icon" href="../../../assets/favicon.png">
-      <meta name="generator" content="mkdocs-1.2.3, mkdocs-material-7.3.4">
+      <meta name="generator" content="mkdocs-1.2.3, mkdocs-material-7.3.6">
     
     
       
@@ -20,7 +20,7 @@
       
     
     
-      <link rel="stylesheet" href="../../../assets/stylesheets/main.db9e7362.min.css">
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.a57b2b03.min.css">
       
         
         <link rel="stylesheet" href="../../../assets/stylesheets/palette.3f5d1f46.min.css">
@@ -67,7 +67,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#example-of-uploading-and-using-metadata-with-ipfs" class="md-skip">
+        <a href="#example-of-uploading-using-metadata-with-ipfs" class="md-skip">
           Skip to content
         </a>
       
@@ -923,6 +923,8 @@
       </a>
       
         
+
+
 <nav class="md-nav md-nav--secondary" aria-label="Table of contents">
   
   
@@ -991,6 +993,8 @@
                 <div class="md-sidebar__scrollwrap">
                   <div class="md-sidebar__inner">
                     
+
+
 <nav class="md-nav md-nav--secondary" aria-label="Table of contents">
   
   
@@ -1042,10 +1046,10 @@
                   </a>
                 
                 
-                <h1 id="example-of-uploading-and-using-metadata-with-ipfs">Example of uploading and using Metadata with IPFS<a class="headerlink" href="#example-of-uploading-and-using-metadata-with-ipfs" title="Permanent link">&para;</a></h1>
+                <h1 id="example-of-uploading-using-metadata-with-ipfs">Example of uploading &amp; using Metadata with IPFS<a class="headerlink" href="#example-of-uploading-using-metadata-with-ipfs" title="Permanent link">&para;</a></h1>
 <h2 id="uploading-images-to-ipfs">Uploading images to IPFS<a class="headerlink" href="#uploading-images-to-ipfs" title="Permanent link">&para;</a></h2>
 <p>To upload images to IPFS, will use the <a href="https://www.pinata.cloud">Pinata</a> service.</p>
-<p>Below is an example of Node JS uploading an image using their API.</p>
+<p>Here you can see an example using Node JS to upload an image using the Pinata API.</p>
 <div class="highlight"><pre><span></span><code>const axios = require(&quot;axios&quot;);
 const fs = require(&quot;fs&quot;);
 const FormData = require(&quot;form-data&quot;);
@@ -1079,7 +1083,7 @@ export const pinFileToIPFS = (pinataApiKey, pinataSecretApiKey) =&gt; {
 }
 </code></pre></div>
 <h2 id="creating-a-metadata-file-for-nft">Creating a Metadata file for NFT<a class="headerlink" href="#creating-a-metadata-file-for-nft" title="Permanent link">&para;</a></h2>
-<p>With <code>IpfsHash</code>, we can create a Metadata file. It will be connected to the NFT inside the blockchain network.</p>
+<p>With the <code>IpfsHash</code>, we can create a Metadata file. It will be connected to the NFT inside the blockchain network.</p>
 <div class="highlight"><pre><span></span><code>{
    &quot;name&quot;: /* NFT Name - This must be a string */,
    &quot;description&quot;: /* Description of the NFT - This must be a string */,
@@ -1200,10 +1204,10 @@ axios(config).then(function (response) {
     <div class="md-dialog" data-md-component="dialog">
       <div class="md-dialog__inner md-typeset"></div>
     </div>
-    <script id="__config" type="application/json">{"base": "../../..", "features": ["navigation.sections", "search.highlight", "navigation.instant"], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "search": "../../../assets/javascripts/workers/search.8397ff9e.min.js", "version": null}</script>
+    <script id="__config" type="application/json">{"base": "../../..", "features": ["navigation.sections", "search.highlight", "navigation.instant"], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "search": "../../../assets/javascripts/workers/search.fcfe8b6d.min.js", "version": null}</script>
     
     
-      <script src="../../../assets/javascripts/bundle.1e84347e.min.js"></script>
+      <script src="../../../assets/javascripts/bundle.b1047164.min.js"></script>
       
     
   </body>

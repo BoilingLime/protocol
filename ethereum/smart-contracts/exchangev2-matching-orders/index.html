@@ -12,7 +12,7 @@
       
       
       <link rel="icon" href="../../../assets/favicon.png">
-      <meta name="generator" content="mkdocs-1.2.3, mkdocs-material-7.3.4">
+      <meta name="generator" content="mkdocs-1.2.3, mkdocs-material-7.3.6">
     
     
       
@@ -20,7 +20,7 @@
       
     
     
-      <link rel="stylesheet" href="../../../assets/stylesheets/main.db9e7362.min.css">
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.a57b2b03.min.css">
       
         
         <link rel="stylesheet" href="../../../assets/stylesheets/palette.3f5d1f46.min.css">
@@ -670,6 +670,8 @@
       </a>
       
         
+
+
 <nav class="md-nav md-nav--secondary" aria-label="Table of contents">
   
   
@@ -1000,6 +1002,8 @@
                 <div class="md-sidebar__scrollwrap">
                   <div class="md-sidebar__inner">
                     
+
+
 <nav class="md-nav md-nav--secondary" aria-label="Table of contents">
   
   
@@ -1059,11 +1063,11 @@
                 
                 
                 <h1 id="exchangev2-matching-orders">ExchangeV2 Matching Orders<a class="headerlink" href="#exchangev2-matching-orders" title="Permanent link">&para;</a></h1>
-<p>The main function of ExchangeV2 is matchOrders. This function takes two sides of order and attempts to match them.</p>
-<p>The Matching Orders process can be divided into stages:</p>
+<p>The main function of ExchangeV2 is matchOrders. This function takes two sides of an order and attempts to match them.</p>
+<p>The matching order process can be divided into stages:</p>
 <ol>
-<li><strong>Order Validation</strong> — checks the order parameters are valid and the caller is authorized to execute the order.</li>
-<li><strong>Asset Matching</strong> — checks the assets from left and right order match and then extracts the matching assets.</li>
+<li><strong>Order Validation</strong> — checks if the order parameters are valid and the caller is authorized to execute the order.</li>
+<li><strong>Asset Matching</strong> — checks the assets from left &amp; right order match and then extracts the matching assets.</li>
 <li><strong>Calculating Fill</strong> — checks and finds out what exact values should be filled. Orders can also be matched partly. This occurs if one of the sides doesn't want to fill other orders completely.</li>
 <li><strong>Order Execution, Transfers</strong> - execute the transfers of the assets, saving Order filling if necessary.</li>
 </ol>
@@ -1071,7 +1075,7 @@
 <h2 id="order-validation">Order Validation<a class="headerlink" href="#order-validation" title="Permanent link">&para;</a></h2>
 <ol>
 <li>Check the start/end date of the order.</li>
-<li>Check whether the receiver of this order is empty or the receiver = order.taker.</li>
+<li>Check whether the receiver of this order is empty or the receiver is the same as order.taker.</li>
 <li>Check whether the order is signed by its creator or the creator of the order performs a transaction.</li>
 <li>If the creator of the order is a contract, then an ERC-1271 check is performed.</li>
 </ol>
@@ -1080,7 +1084,7 @@
 <p>The main goal is to check that <strong>makeAsset</strong> (left) matches <strong>takeAsset</strong> (right) and vice versa.</p>
 <p><strong>makeAsset</strong> is what you sell.</p>
 <ul>
-<li>The purchase order is what you pay for the seller's NFT. It can be RC-20, RC-721, ERC-1155, or any custom resource that uses the asset mapping interface.</li>
+<li>The purchase order is what you pay for the seller's NFT. It can be ERC-20, ERC-721, ERC-1155, or any custom resource that uses the asset mapping interface.</li>
 <li>The sales order is the NFT that you are selling.</li>
 </ul>
 <p><strong>takeAsset</strong> is what you accept in return.</p>
@@ -1088,7 +1092,7 @@
 <li>The purchase order is the NFT that you are buying.</li>
 <li>The sales order is what you are willing to accept.</li>
 </ul>
-<p>New asset types can be added without updating the smart contract. You can be done it with a custom IAssetMatcher.</p>
+<p>New asset types can be added without updating the smart contract. You can do it with a custom IAssetMatcher.</p>
 <p>Possible improvements:</p>
 <ul>
 <li>Support for parametric assets. For example, a user can place an order to exchange 10 ETH for any NFT from a popular collection.</li>
@@ -1103,7 +1107,7 @@
 <li>salt</li>
 </ul>
 <p>Fill orders that differ only in the exchange rate are stored in one mapping slot.</p>
-<p>In addition, full Filled orders can be expanded: users can sign new orders using the same salt. For example, they can increase make.value and take.value.</p>
+<p>In addition, full filled orders can be expanded: users can sign new orders using the same salt. For example, they can increase make.value and take.value.</p>
 <p><strong>Priority of the order rate</strong> — if the exchange rates differ, but orders can be filled (for example, the left order is 10X -&gt; 100Y, and the right one is 100Y -&gt; 5X), then the part on the left determines the exchange rate.</p>
 <p><strong>Rounding errors</strong> — mathematical operations calculate the filling volumes. When rounding is performed and the error exceeds 0.1%, a rounding error will be issued, and the order will not be executed.</p>
 <h2 id="transfer-execution">Transfer Execution<a class="headerlink" href="#transfer-execution" title="Permanent link">&para;</a></h2>
@@ -1199,10 +1203,10 @@
     <div class="md-dialog" data-md-component="dialog">
       <div class="md-dialog__inner md-typeset"></div>
     </div>
-    <script id="__config" type="application/json">{"base": "../../..", "features": ["navigation.sections", "search.highlight", "navigation.instant"], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "search": "../../../assets/javascripts/workers/search.8397ff9e.min.js", "version": null}</script>
+    <script id="__config" type="application/json">{"base": "../../..", "features": ["navigation.sections", "search.highlight", "navigation.instant"], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "search": "../../../assets/javascripts/workers/search.fcfe8b6d.min.js", "version": null}</script>
     
     
-      <script src="../../../assets/javascripts/bundle.1e84347e.min.js"></script>
+      <script src="../../../assets/javascripts/bundle.b1047164.min.js"></script>
       
     
   </body>
