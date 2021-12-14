@@ -14,7 +14,7 @@
         
       
       <link rel="icon" href="../../assets/favicon.png">
-      <meta name="generator" content="mkdocs-1.2.3, mkdocs-material-8.1.0+insiders-4.4.0">
+      <meta name="generator" content="mkdocs-1.2.3, mkdocs-material-8.1.1+insiders-4.4.0">
     
     
       
@@ -22,7 +22,7 @@
       
     
     
-      <link rel="stylesheet" href="../../assets/stylesheets/main.d3b6f337.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.9d9d8b72.min.css">
       
         
         <link rel="stylesheet" href="../../assets/stylesheets/palette.e6a45f82.min.css">
@@ -1040,9 +1040,9 @@
 <p>Using SDK should be fast, easy and intuitive - that's for what we're aiming for.
 Below you can see an example of implementation.</p>
 <ol>
-<li>Install required packages using npm or yarn.
-   For most of the projects, apart of the Rarible SDK we'll also need web3.</li>
-</ol>
+<li>
+<p>Install required packages using npm or yarn.</p>
+<p>For most of the projects, apart of the Rarible SDK we'll also need web3.</p>
 <div class="highlight"><pre><span></span><code>npm install -D @rarible/sdk
 npm install web3
 </code></pre></div>
@@ -1050,15 +1050,17 @@ npm install web3
 <div class="highlight"><pre><span></span><code>yarn add @rarible/sdk -D
 yarn add web3
 </code></pre></div>
-<ol>
-<li>Create a project with the JS framework of your choice (we'll be using NextJS here)</li>
+</li>
+<li>
+<p>Create a project with the JS framework of your choice (we'll be using NextJS here).</p>
+</li>
 </ol>
 <p>In order to properly set up the Rarible SDK we need to follow some standard web3 practices.</p>
 <ol>
-<li>Grab ethereum object out of the global window object</li>
-<li>Use it to create a new instance of Web3</li>
-<li>Create new instance of EthereumWallet class</li>
-<li>Create Rarible SDK with a new instance of ethereumWallet, created in previous step</li>
+<li>Grab ethereum object out of the global window object.</li>
+<li>Use it to create a new instance of Web3.</li>
+<li>Create new instance of EthereumWallet class.</li>
+<li>Create Rarible SDK with a new instance of ethereumWallet, created in previous step.</li>
 </ol>
 <p>In code it looks like that (using TypeScript):</p>
 <div class="highlight"><pre><span></span><code>// Imports
@@ -1079,13 +1081,19 @@ const raribleSdk = createRaribleSdk(ethWallet, &quot;staging&quot;);
 <p>RaribleSdk object is ready for use.</p>
 <p>Few more things:</p>
 <ol>
-<li>If you're wondering what's "staging" in createRaribleSdk it's environment parameter. We have four options here:</li>
+<li>
+<p>If you're wondering what's "staging" in createRaribleSdk it's environment parameter. We have four options here:</p>
+<ul>
 <li>prod (mainnet)</li>
 <li>dev (ropsten)</li>
 <li>staging (rinkeby)</li>
-<li>e2e (you probably won't use this)
-     The difference between them is the chain Id and the Rarible API endpoint.</li>
-<li>If you're creating any sort of blockchain application which will interact with users you'll still need to implement connect metamask button in order to get their wallet connected.</li>
+<li>e2e (you probably won't use this)</li>
+</ul>
+<p>The difference between them is the chain Id and the Rarible API endpoint.</p>
+</li>
+<li>
+<p>If you're creating any sort of blockchain application which will interact with users you'll still need to implement connect metamask button in order to get their wallet connected.</p>
+</li>
 </ol>
 <p>See more information about usage Protocol SDK on <a href="https://github.com/rarible/sdk">https://github.com/rarible/sdk</a></p>
 
@@ -1255,7 +1263,7 @@ const raribleSdk = createRaribleSdk(ethWallet, &quot;staging&quot;);
     <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.sections", "search.highlight", "navigation.instant"], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "search": "../../assets/javascripts/workers/search.2c14e664.min.js"}</script>
     
     
-      <script src="../../assets/javascripts/bundle.fa035162.min.js"></script>
+      <script src="../../assets/javascripts/bundle.67f51cf8.min.js"></script>
       
     
   </body>
