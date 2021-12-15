@@ -18,7 +18,7 @@
     
     
       
-        <title>Flow overview - Rarible Protocol</title>
+        <title>Contract Addresses - Rarible Protocol</title>
       
     
     
@@ -82,7 +82,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#flow-overview" class="md-skip">
+        <a href="#contract-addresses" class="md-skip">
           Skip to content
         </a>
       
@@ -114,7 +114,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Flow overview
+              Contract Addresses
             
           </span>
         </div>
@@ -940,14 +940,16 @@
 
   
   
+    
+  
   
     
       
     
-    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_6" type="checkbox" id="__nav_6" >
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_6" type="checkbox" id="__nav_6" checked>
       
       
       
@@ -970,7 +972,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../tezos/tezos-overview/" class="md-nav__link">
+      <a href="../tezos-overview/" class="md-nav__link">
         Tezos Overview
       </a>
     </li>
@@ -982,11 +984,59 @@
               
   
   
+    
   
-    <li class="md-nav__item">
-      <a href="../../tezos/tezos-contract-addresses/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Contract Addresses
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         Contract Addresses
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#mainnet" class="md-nav__link">
+    Mainnet
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#hangzhou" class="md-nav__link">
+    Hangzhou
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -1018,6 +1068,28 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#mainnet" class="md-nav__link">
+    Mainnet
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#hangzhou" class="md-nav__link">
+    Hangzhou
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -1028,20 +1100,88 @@
             <article class="md-content__inner md-typeset">
               
                 
-<a href="https://github.com/rarible/protocol/edit/master/docs/flow/flow-overview.md" title="Edit this page" class="md-content__button md-icon">
+<a href="https://github.com/rarible/protocol/edit/master/docs/tezos/tezos-contract-addresses.md" title="Edit this page" class="md-content__button md-icon">
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25z"/></svg>
 </a>
 
 
 
-<h1 id="flow-overview">Flow overview<a class="headerlink" href="#flow-overview" title="Permanent link">&para;</a></h1>
-<p>Rarible is currently testing this integration, aiming to release it between 8th and the 12nd of November.</p>
-<p>Support for the Flow blockchain was built by the Rarible team:</p>
-<ul>
-<li>smart contracts: <a href="https://github.com/rarible/flow-contracts">https://github.com/rarible/flow-contracts</a></li>
-<li>indexer: <a href="https://github.com/rarible/flow-nft-indexer">https://github.com/rarible/flow-nft-indexer</a></li>
-<li>SDK: <a href="https://github.com/rarible/flow-sdk">https://github.com/rarible/flow-sdk</a></li>
-</ul>
+<h1 id="contract-addresses">Contract Addresses<a class="headerlink" href="#contract-addresses" title="Permanent link">&para;</a></h1>
+<p>Here you can find Rarible Smart Contracts deployed instances across Tezos Mainnet and Hangzhou Net.</p>
+<h2 id="mainnet">Mainnet<a class="headerlink" href="#mainnet" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th align="left">Name</th>
+<th align="left">Address</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">Rarible public collection</td>
+<td align="left"><a href="https://tzkt.io/KT18pVpRXKPY2c4U2yFEGSH3ZnhB2kL8kwXS">KT18pVpRXKPY2c4U2yFEGSH3ZnhB2kL8kwXS</a></td>
+</tr>
+<tr>
+<td align="left">EURTZ</td>
+<td align="left"><a href="https://tzkt.io/KT1JBNFcB5tiycHNdYGYCtR3kk6JaJysUCi8">KT1JBNFcB5tiycHNdYGYCtR3kk6JaJysUCi8</a></td>
+</tr>
+<tr>
+<td align="left">royalties</td>
+<td align="left"><a href="https://tzkt.io/KT1HNNrmCk1fpqveRDz8Fvww2GM4gPzmA7fo">KT1HNNrmCk1fpqveRDz8Fvww2GM4gPzmA7fo</a></td>
+</tr>
+<tr>
+<td align="left">transfer_proxy</td>
+<td align="left"><a href="https://tzkt.io/KT1N2oby9tYmv5tjkGD1KyVzkDRCmgDkXgSD">KT1N2oby9tYmv5tjkGD1KyVzkDRCmgDkXgSD</a></td>
+</tr>
+<tr>
+<td align="left">transfer_manager</td>
+<td align="left"><a href="https://tzkt.io/KT1HTmwHGvxYgACDr1oJhMNZGzxHCAnNHaHi">KT1HTmwHGvxYgACDr1oJhMNZGzxHCAnNHaHi</a></td>
+</tr>
+<tr>
+<td align="left">fill</td>
+<td align="left"><a href="https://tzkt.io/KT1D2fZiUNo6RPj3zKofH8DqDDgoV7KoyEbb">KT1D2fZiUNo6RPj3zKofH8DqDDgoV7KoyEbb</a></td>
+</tr>
+<tr>
+<td align="left">exchange</td>
+<td align="left"><a href="https://tzkt.io/KT198mqFKkiWerXLmMCw69YB1i6yzYtmGVrC">KT198mqFKkiWerXLmMCw69YB1i6yzYtmGVrC</a></td>
+</tr>
+</tbody>
+</table>
+<h2 id="hangzhou">Hangzhou<a class="headerlink" href="#hangzhou" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th align="left">Name</th>
+<th align="left">Address</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">EURTZ</td>
+<td align="left"><a href="https://hangzhou2net.tzkt.io/KT1Rgf9RNW7gLj7JGn98yyVM34S4St9eudMC">KT1Rgf9RNW7gLj7JGn98yyVM34S4St9eudMC</a></td>
+</tr>
+<tr>
+<td align="left">royalties</td>
+<td align="left"><a href="https://hangzhou2net.tzkt.io/KT1WKRXswxEpTbVg2pGgofzwZCNKjAVcuMgh">KT1WKRXswxEpTbVg2pGgofzwZCNKjAVcuMgh</a></td>
+</tr>
+<tr>
+<td align="left">transfer_proxy</td>
+<td align="left"><a href="https://hangzhou2net.tzkt.io/KT1Qypf9A7DHoAeesu5hj8v6iKwHsJb1RUR2">KT1Qypf9A7DHoAeesu5hj8v6iKwHsJb1RUR2</a></td>
+</tr>
+<tr>
+<td align="left">transfer_manager</td>
+<td align="left"><a href="https://hangzhou2net.tzkt.io/KT1DyDkW16XBuFzpLkXKraD46SAxQDrha5gm">KT1DyDkW16XBuFzpLkXKraD46SAxQDrha5gm</a></td>
+</tr>
+<tr>
+<td align="left">fill</td>
+<td align="left"><a href="https://hangzhou2net.tzkt.io/KT1FAndThSQsVqYQVPHGSG5sQPk1XZycNBvL">KT1FAndThSQsVqYQVPHGSG5sQPk1XZycNBvL</a></td>
+</tr>
+<tr>
+<td align="left">exchange</td>
+<td align="left"><a href="https://hangzhou2net.tzkt.io/KT1ULGjK8FtaJ9QqCgJVN14B6tY76Ykaz6M8">KT1ULGjK8FtaJ9QqCgJVN14B6tY76Ykaz6M8</a></td>
+</tr>
+</tbody>
+</table>
 
   
 
@@ -1088,7 +1228,7 @@
                 
               
               
-                Thanks for your feedback! Help us improve this page by using our <a href="https://github.com/rarible/protocol/issues/new/?title=[Feedback]+Flow%20overview+-+/flow/flow-overview/" target=_blank>feedback form</a>.
+                Thanks for your feedback! Help us improve this page by using our <a href="https://github.com/rarible/protocol/issues/new/?title=[Feedback]+Contract%20Addresses+-+/tezos/tezos-contract-addresses/" target=_blank>feedback form</a>.
               
             </div>
           
@@ -1107,6 +1247,26 @@
       </main>
       
         <footer class="md-footer">
+  
+    <nav class="md-footer__inner md-grid" aria-label="Footer">
+      
+        
+        <a href="../tezos-overview/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Tezos Overview" rel="prev">
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+          </div>
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              Tezos Overview
+            </div>
+          </div>
+        </a>
+      
+      
+    </nav>
   
   <div class="md-footer-meta md-typeset">
     <div class="md-footer-meta__inner md-grid">
