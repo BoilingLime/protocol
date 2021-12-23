@@ -1187,11 +1187,7 @@
 <p><strong>Priority of the order rate</strong> — if the exchange rates differ, but orders can be filled (for example, the left order is 10X -&gt; 100Y, and the right one is 100Y -&gt; 5X), then the part on the left determines the exchange rate.</p>
 <p><strong>Rounding errors</strong> — mathematical operations calculate the filling volumes. When rounding is performed and the error exceeds 0.1%, a rounding error will be issued, and the order will not be executed.</p>
 <h2 id="transfer-execution">Transfer Execution<a class="headerlink" href="#transfer-execution" title="Permanent link">&para;</a></h2>
-<p>Transfers are made using Transfer Manager:</p>
-<ul>
-<li>SimpleTransferManager - transfers assets from maker to taker and vice versa.</li>
-<li>RaribleTransferManager - is a complex version. It takes into account protocol commissions, royalties, etc.</li>
-</ul>
+<p>Transfers are made using RaribleTransferManager. It takes into account protocol commissions, royalties, etc.</p>
 <p>It is planned to expand the RaribleTransferManager to support more royalty schemes and add new features. For example, user fees or multiple order recipients.</p>
 <p>This part of the algorithm can be extended using ITransferExecutor. It will be added new executors to support new asset types. For example, an executor may be added to process packages.</p>
 <p>Possible improvements:</p>
@@ -1339,7 +1335,7 @@
   
 
 <h4>Cookie consent</h4>
-<p>We use cookies to recognize your repeated visits and preferences, as well as to measure the effectiveness of our documentation and whether users find what they're searching for. With your consent, you're helping us to make our documentation better.</p>
+<p>We use cookies to recognize your repeat visits and preferences and measure the effectiveness of our documentation and whether users find what they're searching for. Thank you for helping us improve the documentation.</p>
 <input type="checkbox" class="md-toggle" id="__settings">
 <div class="md-consent__settings">
   <ul class="task-list">
