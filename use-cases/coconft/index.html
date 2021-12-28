@@ -6,7 +6,7 @@
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width,initial-scale=1">
       
-        <meta name="description" content="Rarible Protocol documentation">
+        <meta name="description" content="cocoNFT uses lazy minting so that the creators don't have to pay for minting making the process easy for newbies to crypto">
       
       
       
@@ -14,15 +14,15 @@
         
       
       <link rel="icon" href="../../assets/favicon.png">
-      <meta name="generator" content="mkdocs-1.2.3, mkdocs-material-8.1.0+insiders-4.4.0">
+      <meta name="generator" content="mkdocs-1.2.3, mkdocs-material-8.1.1+insiders-4.4.0">
     
     
       
-        <title>cocoNFT - Rarible Protocol</title>
+        <title>cocoNFT use case with Rarible Smart Contracts - Rarible Protocol</title>
       
     
     
-      <link rel="stylesheet" href="../../assets/stylesheets/main.d3b6f337.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.9d9d8b72.min.css">
       
         
         <link rel="stylesheet" href="../../assets/stylesheets/palette.e6a45f82.min.css">
@@ -116,7 +116,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              cocoNFT
+              cocoNFT use case with Rarible Smart Contracts
             
           </span>
         </div>
@@ -1232,7 +1232,7 @@
 <h1 id="coconft">cocoNFT<a class="headerlink" href="#coconft" title="Permanent link">&para;</a></h1>
 <p><strong>TLDR:</strong></p>
 <p>cocoNFT helps new creators get into the NFT space by building an onRamp that makes it easy to manage your wallet via social media logins.</p>
-<p>cocoNFT uses the following Smart Contract functionalities:  lazy minting, exchange, and indexer.</p>
+<p>cocoNFT uses the following Smart Contract functionalities: lazy minting, exchange, and indexer.</p>
 <p>cocoNFT uses lazy minting so that the creators don't have to pay for minting making the process easy for newbies to crypto. They are planning on using the ability to support checkout right on our website via the Rarible Protocol Exchange and the indexer I believe to show a user's Lazy Minted NFTs.</p>
 <p><strong>How cocoNFT would have changed things knowing what they know now:</strong></p>
 <blockquote>
@@ -1245,11 +1245,16 @@ As we were building found a lot of frameworks, we would have used something like
 <ol>
 <li>Fork Rarible Protocol: https://github.com/rarible/protocol-contracts (Best to explore and get familiar)</li>
 <li>Identify which NFT token type you will be using, 721 or 1155, and make any modifications necessary in the tokens folder: https://github.com/rarible/protocol-contracts/tree/master/tokens</li>
-<li>Update the migrations files to pass in whatever parameters you want for the contract you plan to deploy: https://github.com/rarible/protocol-contracts/tree/master/tokens/migrations</li>
-</ol>
-<p><strong>Note:</strong> Only migration files 1-4 are necessary for initial deployment, and only #2 for 721 and #3 for 1155 if you don't want to deploy contracts for both.</p>
-<ol>
-<li>Take note of the addresses for the contracts. These are upgradeable contracts, so that you will be directing calls to the proxy address.</li>
+<li>
+<p>Update the migrations files to pass in whatever parameters you want for the contract you plan to deploy: https://github.com/rarible/protocol-contracts/tree/master/tokens/migrations</p>
+<details class="note" open="open">
+<summary>Note</summary>
+<p>Only migration files 1-4 are necessary for initial deployment, and only #2 for 721 and #3 for 1155 if you don't want to deploy contracts for both.</p>
+</details>
+</li>
+<li>
+<p>Take note of the addresses for the contracts. These are upgradeable contracts, so that you will be directing calls to the proxy address.</p>
+</li>
 <li>Test some functions like <code>name()</code> or <code>symbol()</code> in your terminal to ensure it's working</li>
 <li>Start using Rarible's APIs for lazy minting and order creation to build out your marketplace: https://api-reference.rarible.com/#operation/upsertOrder</li>
 </ol>
@@ -1300,7 +1305,7 @@ As we were building found a lot of frameworks, we would have used something like
                 
               
               
-                Thanks for your feedback! Help us improve this page by using our <a href="https://github.com/rarible/protocol/issues/new/?title=[Feedback]+cocoNFT+-+/use-cases/coconft/" target=_blank>feedback form</a>.
+                Thanks for your feedback! Help us improve this page by using our <a href="https://github.com/rarible/protocol/issues/new/?title=[Feedback]+cocoNFT%20use%20case%20with%20Rarible%20Smart%20Contracts+-+/use-cases/coconft/" target=_blank>feedback form</a>.
               
             </div>
           
@@ -1444,7 +1449,7 @@ As we were building found a lot of frameworks, we would have used something like
     <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.sections", "search.highlight", "navigation.instant", "navigation.tabs", "navigation.tabs.sticky", "navigation.top"], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "search": "../../assets/javascripts/workers/search.2c14e664.min.js"}</script>
     
     
-      <script src="../../assets/javascripts/bundle.fa035162.min.js"></script>
+      <script src="../../assets/javascripts/bundle.67f51cf8.min.js"></script>
       
     
   </body>
