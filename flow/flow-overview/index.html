@@ -1055,10 +1055,73 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#smart-contracts" class="md-nav__link">
+    Smart Contracts
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#api-reference" class="md-nav__link">
+    API Reference
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#sdk" class="md-nav__link">
+    SDK
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
       
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../flow-sdk/" class="md-nav__link">
+        Flow SDK
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../flow-smart-contracts/" class="md-nav__link">
+        Flow Smart Contracts
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../flow-api-indexer/" class="md-nav__link">
+        Flow API and Indexer
+      </a>
     </li>
   
 
@@ -1259,6 +1322,27 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#smart-contracts" class="md-nav__link">
+    Smart Contracts
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#api-reference" class="md-nav__link">
+    API Reference
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#sdk" class="md-nav__link">
+    SDK
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -1279,12 +1363,101 @@
 
 <h1 id="rarible-protocol-flow">Rarible Protocol Flow<a class="headerlink" href="#rarible-protocol-flow" title="Permanent link">&para;</a></h1>
 <h2 id="overview">Overview<a class="headerlink" href="#overview" title="Permanent link">&para;</a></h2>
-<p>Rarible is currently testing this integration, aiming to release it between 8th and the 12nd of November.</p>
-<p>Support for the Flow blockchain was built by the Rarible team:</p>
+<p>Rarible Protocol Flow combines smart contracts for minting, exchanging tokens, APIs for order creation, discovery, standards used in smart contracts.</p>
+<p>Rarible pursues the goal of creating a highly liquid environment for all NFTs out there: a robust on-chain protocol designed for NFTs to exist in a connected space. A separate initiative with a dedicated team will enable direct interactions with the protocol from multiple front ends like storefronts or wallets, offering additional distribution channels and enhancing liquidity. It will also fuel the discovery of new NFT trading mechanics.</p>
+<p>Main features:</p>
 <ul>
-<li>smart contracts: <a href="https://github.com/rarible/flow-contracts">https://github.com/rarible/flow-contracts</a></li>
-<li>indexer: <a href="https://github.com/rarible/flow-nft-indexer">https://github.com/rarible/flow-nft-indexer</a></li>
-<li>SDK: <a href="https://github.com/rarible/flow-sdk">https://github.com/rarible/flow-sdk</a></li>
+<li>Minting:</li>
+<li>Exchange (List, Sell/Buy):<ul>
+<li>On-chain mechanics of listing and buying items.</li>
+<li>Safe removal of an item from the sale if the item has been moved or burned after being put up for sale.</li>
+<li>Multiple asset types are supported to fill orders: <a href="https://docs.onflow.org/core-contracts/flow-token/">FT</a> and <a href="https://docs.onflow.org/core-contracts/fungible-token/">NFT</a>.</li>
+<li>Supported FT:<ul>
+<li><a href="https://docs.onflow.org/core-contracts/flow-token/">FLOW</a></li>
+<li><a href="https://docs.onflow.org/fusd/transactions/">FUSD</a></li>
+<li><a href="https://docs.onflow.org/core-contracts/fungible-token/">FT</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Indexer:<ul>
+<li>Provides ways to query NFT for contracts that you want to monitor.</li>
+<li>Exposes ways to create orders.</li>
+</ul>
+</li>
+</ul>
+<h2 id="smart-contracts">Smart Contracts<a class="headerlink" href="#smart-contracts" title="Permanent link">&para;</a></h2>
+<p>Here you can find Rarible Smart Contracts deployed instances across Flow Testnet and Mainnet.</p>
+<table>
+<thead>
+<tr>
+<th align="left">Smart Contract</th>
+<th align="left">Mainnet</th>
+<th align="left">Testnet</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">RaribleNFT</td>
+<td align="left"><a href="https://flowscan.org/contract/A.01ab36aaf654a13e.RaribleNFT">A.01ab36aaf654a13e.RaribleNFT</a></td>
+<td align="left"><a href="https://testnet.flowscan.org/contract/A.ebf4ae01d1284af8.RaribleNFT">A.ebf4ae01d1284af8.RaribleNFT</a></td>
+</tr>
+<tr>
+<td align="left">RaribleOrder</td>
+<td align="left"><a href="https://flowscan.org/contract/A.01ab36aaf654a13e.RaribleOrder">A.01ab36aaf654a13e.RaribleOrder</a></td>
+<td align="left"><a href="https://testnet.flowscan.org/contract/A.ebf4ae01d1284af8.RaribleOrder">A.ebf4ae01d1284af8.RaribleOrder</a></td>
+</tr>
+<tr>
+<td align="left">RaribleFee</td>
+<td align="left"><a href="https://flowscan.org/contract/A.336405ad2f289b87.RaribleFee">A.336405ad2f289b87.RaribleFee</a></td>
+<td align="left"><a href="https://testnet.flowscan.org/contract/A.ebf4ae01d1284af8.RaribleFee">A.ebf4ae01d1284af8.RaribleFee</a></td>
+</tr>
+<tr>
+<td align="left">LicensedNFT</td>
+<td align="left"><a href="https://flowscan.org/contract/A.01ab36aaf654a13e.LicensedNFT">A.01ab36aaf654a13e.LicensedNFT</a></td>
+<td align="left"><a href="https://testnet.flowscan.org/contract/A.ebf4ae01d1284af8.LicensedNFT">A.ebf4ae01d1284af8.LicensedNFT</a></td>
+</tr>
+</tbody>
+</table>
+<p>For more information, see <a href="https://github.com/rarible/flow-contracts">Rarible Protocol Flow Smart Contracts</a> repo on GitHub.</p>
+<h2 id="api-reference">API Reference<a class="headerlink" href="#api-reference" title="Permanent link">&para;</a></h2>
+<p>Use these base URLs to access our API on different Flow networks:</p>
+<table>
+<thead>
+<tr>
+<th align="left">Base URL</th>
+<th align="center">Network</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left"><a href="https://flow-api.rarible.com/v0.1/doc">https://flow-api.rarible.com/v0.1/doc</a></td>
+<td align="center">Mainnet</td>
+</tr>
+<tr>
+<td align="left"><a href="https://flow-api-staging.rarible.com/v0.1/doc">https://flow-api-staging.rarible.com/v0.1/doc</a></td>
+<td align="center">Testnet Rinkeby</td>
+</tr>
+<tr>
+<td align="left"><a href="http://flow-api-dev.rarible.com/v0.1/doc">http://flow-api-dev.rarible.com/v0.1/doc</a></td>
+<td align="center">Testnet Ropsten</td>
+</tr>
+</tbody>
+</table>
+<p>For more information, see <a href="https://github.com/rarible/flow-nft-indexer">Flow Indexer</a> and <a href="https://github.com/rarible/flow-protocol-api">Flow OpenAPI</a> repos on GitHub.</p>
+<h2 id="sdk">SDK<a class="headerlink" href="#sdk" title="Permanent link">&para;</a></h2>
+<p>Rarible Protocol Flow SDK enables applications to interact with Rarible Flow protocol easily.</p>
+<p>With the Rarible Protocol Flow SDK, you can:</p>
+<ul>
+<li>Authenticate customer</li>
+<li>Logout customer</li>
+<li>Make regular mint</li>
+<li>Transfer tokens</li>
+<li>Burn tokens</li>
+<li>Create sell orders</li>
+<li>Cancel sell order</li>
+<li>Buy tokens for regular sell orders</li>
+<li>Sign user message</li>
 </ul>
 
   
@@ -1376,13 +1549,13 @@
       
       
         
-        <a href="../../api-reference/" class="md-footer__link md-footer__link--next" aria-label="Next: API" rel="next">
+        <a href="../flow-sdk/" class="md-footer__link md-footer__link--next" aria-label="Next: Flow SDK" rel="next">
           <div class="md-footer__title">
             <div class="md-ellipsis">
               <span class="md-footer__direction">
                 Next
               </span>
-              API
+              Flow SDK
             </div>
           </div>
           <div class="md-footer__button md-icon">
